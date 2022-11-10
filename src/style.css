@@ -12,6 +12,7 @@ body {
     width: 65vw;
     height: 80vh;
     display: flex;
+    overflow: hidden;
 }
 
 .sidebar {
@@ -23,3 +24,131 @@ body {
 .chat {
     flex: 2;
 }
+
+/*******************************/
+
+.navbar {
+    background-color: rgb(2, 77, 52);
+    display: flex;
+    align-items: center;
+    height: 50px;
+    padding: 10px;
+    justify-content: space-between;
+    color: white;
+}
+
+.user {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    gap: 10px;
+    font-weight: bold;
+}
+
+.user img {
+    background-color: white;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    object-fit: cover;
+    /* border: none; */
+}
+
+
+.logout {
+    background-color: rgb(150, 70, 143);
+    color: white;
+    font-size: 10px;
+    border: none;
+    cursor: pointer;
+    height: 30px;
+}
+
+/********************************************/
+
+.searchForm input {
+    background-color: transparent;
+    /* border: none; */
+    color: white;
+    outline: none;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid black;
+    overflow: hidden;
+}
+
+.search {
+    border-bottom: 1px solid gray;
+}
+
+.searchForm {
+
+}
+
+.userChat {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    color: white;
+}
+
+.userChat:hover {
+    background-color: aqua;
+}
+
+.userChat img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: white;
+}
+
+.userChat span {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.userChat p {
+    font-size: 14px;
+}
+
+.chatInfo {
+    height: 50px;
+    background-color: rgb(125, 153, 153);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    color: white;
+}
+
+.chatIcons {
+    display: flex;
+    gap: 10px;
+    cursor: pointer;
+}
+
+/****************************/
+
+.messages {
+    background-color: blue;
+    padding: 10px;
+    height: calc(100% - 160px);
+}
+
+.input {
+    background-color: white;
+    height: 50px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+/****************************/
