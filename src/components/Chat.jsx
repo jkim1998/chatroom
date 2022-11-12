@@ -5,12 +5,16 @@ import '../style.css';
 import PersonAddAlt1Icon from '@material-ui/icons/PersonAdd';
 import Settings from '@material-ui/icons/Settings';
 import Logout from '@material-ui/icons/ExitToApp';
+import Group from '@material-ui/icons/Group';
 
 function Chat() {
   return (
     <div className='chat'>
         <div className="chatInfo">
-          <span>Jonathan Kim</span>
+          <div className="chatName">
+            <Group />
+            <span>Jonathan Kim</span>
+          </div>
           <div className='chatIcons'>
               <PersonAddAlt1Icon />
               <Settings />

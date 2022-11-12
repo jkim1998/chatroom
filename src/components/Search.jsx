@@ -6,14 +6,10 @@ function Search() {
   return (
     <div className='search'>
         <div className='searchForm'>
-            <input type="text" placeholder='search...'/>
-        </div>   
-        <div className='userChat'>
-            <img src={profilepic}/>
-            <div className='userChatInfo'>
-                <span>Jonathan Kim</span>
+            <div className='searchbox'>
+                <input type="text" placeholder='Find or start conversation'/>
             </div>
-        </div>
+        </div>   
     </div>
   )
 }

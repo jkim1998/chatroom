@@ -3,6 +3,22 @@
     --light_Theme: rgb(224, 202, 202);
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: rgb(73, 73, 73); 
+  }
+   
+  ::-webkit-scrollbar-thumb {
+    background: #202122; 
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
 body {
     background-color: var(--dark_Theme);
     height: 100vh;
@@ -28,18 +44,20 @@ body {
 
 .chat {
     flex: 2;
+    background-color: #414449;
 }
 
 /*******************************/
 
 .navbar {
-    background-color: #23272a;
+    background-color: #1f2224;
     display: flex;
     align-items: center;
     height: 50px;
     padding: 10px;
     justify-content: space-between;
     color: white;
+    cursor: pointer;
 }
 
 .user {
@@ -48,21 +66,34 @@ body {
     align-items: center;
 }
 
-.logo {
+.mute {
     display: flex;
     gap: 10px;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .user img {
     background-color: white;
-    height: 24px;
-    width: 24px;
+    height: 40px;
+    width: 40px;
     border-radius: 50%;
     object-fit: cover;
     /* border: none; */
 }
 
+.userID {
+    display: flex;
+    flex-direction: column;
+}
+
+.ID {
+    font-weight: bold;
+}
+
+.num {
+    color:rgb(122, 124, 124);
+}
 
 .logout {
     background-color: rgb(150, 70, 143);
@@ -75,32 +106,55 @@ body {
 
 /********************************************/
 
+.search {
+    height: 50px;
+    background-color: #23272a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    color: white;
+    border-bottom: 1px solid black;
+}
+
+.searchForm {
+    background-color: rgb(22, 22, 22);
+    height: 20px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    width: 90%;
+}
+
 .searchForm input {
     background-color: transparent;
     /* border: none; */
     color: white;
     outline: none;
     width: 100%;
+    height: 30px;
     border: none;
-    border-bottom: 1px solid black;
+    /* border-bottom: 1px solid black; */
     overflow: hidden;
+    border-radius: 7px;
 }
 
-.search {
-    border-bottom: 1px solid gray;
-}
-
-.searchForm {
-
+.searchbox {
+    width: 95%;
 }
 
 .userChat {
-    padding: 10px;
     display: flex;
     align-items: center;
-    gap: 10px;
     cursor: pointer;
     color: white;
+    width: calc(100% - 70px);
+    gap: 10px;
+    padding: 20px;
+    height: 50px;
+    flex-direction: row;
 }
 
 .userChat:hover {
@@ -117,13 +171,19 @@ body {
 }
 
 .userChat span {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 500;
 }
 
 .userChat p {
     font-size: 14px;
 }
+
+.userChatInfo {
+    display: flex;
+    flex-direction: column;
+}
+
 
 .chatInfo {
     height: 50px;
@@ -135,10 +195,55 @@ body {
     color: white;
 }
 
+.chatName {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
 .chatIcons {
     display: flex;
     gap: 10px;
     cursor: pointer;
+}
+
+.chats {
+    height: calc(100% - 140px);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.chatType {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 20px;
+    padding: 20px;
+    width: calc(100% - 40px);
+}
+
+.type {
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+}
+
+.type:hover {
+    background-color: rgb(132, 136, 136);
+    border-radius: 5px;
+}
+
+.DM_Container {
+    padding: 25px;
+    width: 85%;
+}
+
+.DM {
+    text-transform: uppercase;
 }
 
 /****************************/
@@ -162,6 +267,8 @@ body {
     border-radius: 10px;
     width: 90%;
     margin: 3%;
+    cursor: pointer;
+    gap: 10px;
 }
 
 .input input {
@@ -183,6 +290,10 @@ body {
     padding: 10px 15px;
     color: white;
     background-color: brown;
+    cursor: pointer;
+}
+
+label {
     cursor: pointer;
 }
 
@@ -225,6 +336,7 @@ body {
     padding: 10px 20px;
     border-radius: 0px 10px 10px 10px;
     max-width: max-content;
+    /* width: 100%; */
 }
 
 .messageContent img {
@@ -240,6 +352,6 @@ body {
 }
 
 .owner p {
-    background-color: rgb(49, 93, 160);
+    background-color: rgb(230, 233, 238);
     border-radius: 10px 0px 10px 10px;
 }
