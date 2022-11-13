@@ -18,39 +18,29 @@ const Register = () => {
     try {
     const res = await createUserWithEmailAndPassword(auth, email, password);
 
-
-    // Create the file metadata
-    /** @type {any} */
-    const metadata = {
-      contentType: 'image/jpeg'
-    };
-
-    // Upload file and metadata to the object 'images/mountains.jpg'
     const storageRef = ref(storage, displayName);
-    const uploadTask = uploadBytesResumable(storageRef, file, metadata);
-
-    // Listen for state changes, errors, and completion of the upload.
-    uploadTask.on(
+    const uploadTask = uploadBytesResumable(storageRef, file);
+    
+    // Register three observers
+    uploadTask.on('state_changed', 
       (error) => {
-      setErr(true);
-    },
+        setErr(true);
+      }, 
       () => {
-        getDownloadURL(uploadTask.snapshot.ref).then( async(downloadURL) => {
-          await updateProfile(res.user,{
+        getDownloadURL(uploadTask.snapshot.ref).then(async (downloadURL) => {
+          await updateProfile(res.user(), {
             displayName,
             photoURL:downloadURL,
-          });
+          })
           await setDoc(doc(db, "users", res.user.uid), {
             uid: res.user.uid,
             displayName,
             email,
-            photoURL: downloadURL
-          });
+            photoURL: downloadURL,
+          })
         });
       }
-);
-   
-
+    );   
     } catch(err) {
       setErr(true);
     }
