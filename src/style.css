@@ -207,6 +207,14 @@ body {
     cursor: pointer;
 }
 
+.chatIcons .link:visited {
+    color: white;
+}
+
+a:visited {
+    color:black;
+}
+
 .chats {
     height: calc(100% - 140px);
     color: white;

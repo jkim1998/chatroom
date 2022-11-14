@@ -46,10 +46,24 @@ body,html {
   width: 350px;
 }
 
-.formWrapper > form > button {
+.login_button {
+  /* border-radius: 20px; */
+  height: 50px;
+  width: 150px;
+  background-color: rgb(178, 154, 247);
+  color: white;
+}
+
+.signup_button {
   /* border-radius: 20px; */
   height: 50px;
   width: 80%;
   background-color: rgb(178, 154, 247);
   color: white;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
 }

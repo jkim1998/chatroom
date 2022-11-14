@@ -6,6 +6,7 @@ import PersonAddAlt1Icon from '@material-ui/icons/PersonAdd';
 import Settings from '@material-ui/icons/Settings';
 import Logout from '@material-ui/icons/ExitToApp';
 import Group from '@material-ui/icons/Group';
+import { Link } from "react-router-dom";
 
 function Chat() {
   return (
@@ -18,7 +19,8 @@ function Chat() {
           <div className='chatIcons'>
               <PersonAddAlt1Icon />
               <Settings />
-              <Logout />
+              {/* <a href="/login"><Logout /></a> */}
+              <Link to="/Login" className='link'><Logout /></Link>
           </div>
         </div>
         <Messages />

@@ -64,7 +64,7 @@ const Register = () => {
                 <input type="email" placeholder="Email" />
                 <input type="password" placeholder="Password" />
                 <input type="file" />
-                <button>Sign Up</button>
+                <button className='signup_button'>Sign Up</button>
                 {err && <span>Something went wrong. Please try again later</span>}
             </form>
             <p>Already have an account? <a href="/login">Sign in</a></p>
