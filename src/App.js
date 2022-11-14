@@ -2,17 +2,21 @@ import './App.css';
 import Register from "./pages/Register";
 import Login from './pages/Login';
 import Home from './pages/Home';
-// import './style.scss';
-import './firebase.js';
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from "./context/AuthContext";
 
 function App() {
+
+  // const {currentUser} = useContext(AuthContext)
+
+
   return (
     <div>
       {/* <Home /> */}
-      <Register />
+      {/* <Register /> */}
       {/* <Login /> */}
-      {/* <BrowseRouter>
+      <BrowserRouter>
         <Routes>
           <Route path="/">
             <Route index element={<Home />} />
@@ -20,7 +24,7 @@ function App() {
             <Route path="register" element={<Register />} />
           </Route>
         </Routes>
-      </BrowseRouter> */}
+      </BrowserRouter>
     </div>
   );
 }

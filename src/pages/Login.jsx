@@ -10,7 +10,7 @@ function Login() {
                 <input type="password" placeholder="Password" />
                 {/* <input type="file" /> */}
                 <button>Log In</button>
-                <p>Don't have an account? <a href="https://www.w3schools.com">Create Account</a></p>
+                <p>Don't have an account? <a href="/register">Create Account</a></p>
             </form>
         </div>
     </div>

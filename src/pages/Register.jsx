@@ -5,9 +5,12 @@ import { auth, getStorage, db, storage } from "../firebase";
 import { SettingsPowerRounded } from '@material-ui/icons';
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { doc, setDoc } from "firebase/firestore"; 
+import { useNavigate } from 'react-router-dom';
 
 const Register = () => {
   const [err, setErr] = useState(false);
+  const navigate = useNavigate();
+
   const handleSubmit = async (e)=> {
     e.preventDefault()
     const displayName = e.target[0].value;
@@ -38,6 +41,10 @@ const Register = () => {
             email,
             photoURL: downloadURL,
           })
+          await setDoc(doc(db, "userChats", res.user.uid), {
+            
+          })
+          navigate("/");
         });
       }
     );   
@@ -60,7 +67,7 @@ const Register = () => {
                 <button>Sign Up</button>
                 {err && <span>Something went wrong. Please try again later</span>}
             </form>
-            <p>Already have an account? <a href="https://www.w3schools.com">Sign in</a></p>
+            <p>Already have an account? <a href="/login">Sign in</a></p>
         </div>
     </div>
   )
