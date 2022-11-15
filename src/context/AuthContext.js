@@ -9,7 +9,8 @@ export const AuthContextProvider = ({children}) => {
 
     useEffect(()=> {
         const unsub = onAuthStateChanged(auth,(user)=>{
-            setCurrentUser(user)
+            setCurrentUser(user);
+            console.log(user)
         });
 
         //mem leak

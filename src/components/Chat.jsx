@@ -7,6 +7,8 @@ import Settings from '@material-ui/icons/Settings';
 import Logout from '@material-ui/icons/ExitToApp';
 import Group from '@material-ui/icons/Group';
 import { Link } from "react-router-dom";
+import { signOut } from "firebase/auth";
+import { auth } from "../firebase";
 
 function Chat() {
   return (
@@ -21,6 +23,7 @@ function Chat() {
               <Settings />
               {/* <a href="/login"><Logout /></a> */}
               <Link to="/Login" className='link'><Logout /></Link>
+              <button onClick={()=>signOut(auth)}><Logout /></button>
           </div>
         </div>
         <Messages />
