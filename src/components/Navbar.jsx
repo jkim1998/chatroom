@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../style.css';
 import PersonIcon from '@material-ui/icons/Person';
 import Mic from '@material-ui/icons/Mic';
@@ -6,9 +6,21 @@ import Mic from '@material-ui/icons/Mic';
 import Headset from '@material-ui/icons/Headset';
 import Settings from '@material-ui/icons/Settings';
 // import Headsetoff from '@material-ui/icons/Headsetoff';
+import Person from '@material-ui/icons/Person';
 import profilepic from './profilepic.png';
 
 function Navbar() {
+  const [icon_Mute, setMute] = useState();
+  const [icon_Deaf, setDeaf] = useState();
+
+  const mute = () => {
+    setMute('Person');
+  }
+
+  const deafen = () => {
+    setDeaf('');
+  }
+
   return (
     <div className='navbar'>
       <div className='user'>
