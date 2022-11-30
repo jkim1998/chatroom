@@ -8,6 +8,9 @@ import Settings from '@material-ui/icons/Settings';
 // import Headsetoff from '@material-ui/icons/Headsetoff';
 import Person from '@material-ui/icons/Person';
 import profilepic from './profilepic.png';
+import { signOut } from "firebase/auth";
+import { auth } from "../firebase";
+
 
 function Navbar() {
   const [icon_Mute, setMute] = useState();
@@ -30,7 +33,7 @@ function Navbar() {
           <span className='ID'>Jonathan Kim</span>
           <span className='num'>#6819</span>
         </div>
-        {/* <button className='logout'>logout</button> */}
+        <button className='logout' onClick={() => signOut()}>logout</button>
       </div>
       <div className='mute'>
           <Mic />

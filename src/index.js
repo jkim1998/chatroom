@@ -2,15 +2,18 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import { AuthContextProvider } from './context/AuthContext';
+import { ChatContextProvider } from "./context/ChatContext";
 // import reportWebVitals from './reportWebVitals';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
-    <React.StrictMode>
+  <AuthContextProvider>
+    <ChatContextProvider>
+      <React.StrictMode>
         <App />
-    </React.StrictMode>
-  </React.StrictMode>
+      </React.StrictMode>
+    </ChatContextProvider>
+  </AuthContextProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function
