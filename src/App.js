@@ -1,7 +1,7 @@
-import './App.css';
+import "./App.css";
 import Register from "./pages/Register";
-import Login from './pages/Login';
-import Home from './pages/Home';
+import Login from "./pages/Login";
+import Home from "./pages/Home";
 import { BrowserRouter, Routes, Route, Link, Navigate } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "./context/AuthContext";
@@ -14,7 +14,7 @@ function App() {
       return <Navigate to="/login" />;
     }
 
-    return children
+    return children;
   };
 
   return (

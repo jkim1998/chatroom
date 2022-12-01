@@ -1,4 +1,5 @@
-body,html {
+body,
+html {
   margin: 0;
   padding: 0;
 }
@@ -22,10 +23,9 @@ body,html {
   align-items: center;
 }
 
- h {
+h {
   font-size: 60px;
 }
-
 
 .formWrapper > form {
   display: flex;
