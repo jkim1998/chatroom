@@ -5,7 +5,6 @@ html {
 }
 
 .formContainer {
-  /* background-color: rgb(202, 214, 214); */
   height: 100vh;
   display: flex;
   align-items: center;
