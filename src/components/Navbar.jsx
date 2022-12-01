@@ -34,9 +34,9 @@ function Navbar() {
           <span className="ID">{currentUser.displayName}</span>
           <span className="num">#6819</span>
         </div>
-        <button className="logout" onClick={() => signOut(auth)}>
+        {/* <button className="logout" onClick={() => signOut(auth)}>
           logout
-        </button>
+        </button> */}
       </div>
       <div className="mute">
         <Mic />

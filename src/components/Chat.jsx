@@ -22,7 +22,7 @@ function Chat() {
               <PersonAddAlt1Icon />
               <Settings />
               {/* <a href="/login"><Logout /></a> */}
-              <Link to="/Login" className='link'><Logout /></Link>
+              {/* <Link to="/Login" className='link'><Logout /></Link> */}
               <button onClick={()=>signOut(auth)}><Logout /></button>
           </div>
         </div>
